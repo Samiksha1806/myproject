@@ -1,0 +1,918 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    color:white;
+}
+body{
+  box-sizing: border-box;
+}
+/* -----------desktop-header--------- */
+
+.header-navbar{
+  display:flex;
+   /* display:none;  */
+  width:100vw;
+  height:5rem;
+  background-color:rgb(171, 171, 216);
+}
+.header-navbar h1{
+  font-size:2rem;
+  padding:1rem 1rem 1rem 0.9rem;
+}
+.header{
+  display: none;
+  /* display: flex; */
+  align-items: center;
+  padding:1.25rem 0.6rem;
+  background-color: rgb(174, 174, 213);
+}
+#mobile{
+  text-align: center;
+  display: none;
+  padding:1rem 1rem 1rem 0.6rem;
+
+}
+#navbar{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+#navbar li{
+  list-style:none; 
+  padding: 0rem 1.25;
+}
+#navbar li a{
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+.wrapper{
+  width:750px;
+  margin-top:0.8rem;
+  margin-left:8rem;
+  z-index: 999;
+}
+.wrapper .search-input{
+  background: #fff;
+  width:100%;
+  position: relative;
+}
+.search-input input{
+  color:black;
+  height:45px;
+  width:750px;
+  outline:none;
+  border: none;
+  padding:0 60px 0 20px;
+  font-size:18px;
+  box-shadow:0px 1px 5px rgba(0,0,0,0.1);
+}
+
+.search-input .srch-icon{
+  height:50px;
+  width:55px;
+  line-height:55px;
+  position:absolute;
+  top:0;
+  right:0;
+  text-align: center;
+  font-size: 18px;
+  cursor:pointer;
+}
+.srch-icon i{
+  color:gray;
+}
+.search-input .autocom-box{
+  padding:0px;
+  max-height:280px;
+  opacity: 0;
+  pointer-events: none;
+}
+.search-input.active .autocom-box{
+ padding:10px 8px;
+ opacity: 1;
+pointer-events: auto;
+}
+
+.autocom-box li {
+list-style:none;
+padding:8px 12px;
+display: none;
+color:gray;
+}
+.search-input.active .autocom-box li {
+  display:block;
+  z-index:999;
+}
+.autocom-box li:hover{
+  background: #efefef;
+}
+.autocom-box li a{
+  padding:8px 12px;
+  text-decoration: none;
+  color:gray;
+}
+
+.header-navbar .icons{
+  position:absolute;
+  right:0;
+  font-size:1.5rem;
+  padding:1rem 1.5rem;
+}
+
+.header-navbar .icons a{
+padding:1rem 0rem;
+cursor:pointer
+}
+ /* -----------bottom header--------  */
+
+.menu-bar{
+  width:100vw;
+  background-color:rgb(174, 174, 213);
+  text-align: center;
+}
+.menu-bar ul{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.menu-bar ul li{
+margin:0.6rem;
+padding: 0.6rem 0.6rem;
+}
+.menu-bar ul li a{
+  text-decoration:none;
+  font-size: 1.2rem;
+  padding:0rem 1.25rem;
+}
+.sub-menu-1{
+  display: none;
+}
+.menu-bar ul li:hover .sub-menu-1{
+  display: block;
+  position:absolute;
+  margin-top:0.9rem;
+  margin-left:-0.9rem;
+  background-color:rgb(174, 174, 213);
+  z-index: 999;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul{
+  display:block;
+  margin:0.6rem;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li{
+  width:16rem;
+  text-align: left; 
+  border-bottom:1px solid rgb(246, 234, 221);
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+  border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+  color:rgb(135, 43, 43);
+}
+.fa-caret-right{
+  padding-left:4rem;
+}
+.sub-menu-2{
+  display: none;
+}
+.hover-menu:hover .sub-menu-2{
+  display: flex;
+  visibility: visible;
+  position: absolute;
+  margin-top: -0.3rem;
+  margin-left: 15.6rem;
+  background-color: rgb(174, 174, 213);
+  z-index: 999;
+}
+
+/* -------------MAIN-slider-(section1)-------------- */
+
+.slide-container::before{
+  position:relative;
+  width:100vw;
+}
+.slide img{
+  width:100vw;
+  height:75vh;
+  opacity:0.8;
+  object-fit: cover;
+}
+.slide p{
+  position:absolute;
+  left:10%;
+  top:30%;
+  font-size:3.5rem;
+  color:white;
+}
+.arrow{
+  color:black;
+  text-align:center;
+  width:3.5rem;
+  padding:1rem;
+  height:6rem;
+  background-color: white;
+  cursor:pointer;
+  position:absolute;
+  top:50%;
+  font-size:2.5rem;
+}
+.next{
+  right:0;
+}
+.prev{
+  left:0;
+}
+.caption0{
+position:absolute;
+left:15%;
+top:50%;
+font-size:4rem;
+}
+.caption0 h5{
+margin-top:2.5rem;
+font-size:3rem;
+}
+.caption1{
+  position:absolute;
+  left:15%;
+  top:40%;
+  font-size:4rem;
+  color:white;
+  }
+  .caption1 h5{
+margin-top:2.5rem;
+  }
+.caption2{
+    position:absolute;
+    left:15%;
+    top:40%;
+    font-size:3.5rem;
+    color:white;
+    }
+    .caption2 h5{
+      margin-top:2.5rem;
+    }
+.caption3{
+      position:absolute;
+      left:15%;
+      top:50%;
+      font-size:3.5rem;
+      color:white;
+      }
+      .caption3 h4{
+        width:40rem;
+      }
+      .caption3 h5{
+        margin-top:2rem;
+      }
+ .slide{
+  display:none;
+ }     
+
+
+/* -------------Top Deals on Womens Fasion(section-2)-------------- */
+
+.product-container{
+  width:100vw;
+  text-align:center;
+}
+.product-container h2{
+padding-top:1rem;
+padding-bottom: 1rem;
+font-size:2.5rem;
+color:black;
+}
+.product-container .orange{
+  color:orange;
+}
+.product-container span{
+  color:black;
+}
+.product-items{
+  margin:auto;
+  width:90vw;
+  padding-top:1.25;
+  text-align:center;
+  display: flex;
+  justify-content:space-between; 
+  flex-wrap:wrap;
+}
+.product{
+  width:23%;
+  /* min-width:15.6rem; */
+  padding:0.6rem 0.7rem;
+  /* border:1px solid gray; */
+  cursor: pointer;
+  margin:0.9rem 0rem;
+}
+.product img{
+  width:100%;
+  object-fit: cover;
+}
+.product .customize{
+  height:16rem;
+}
+.product .description{
+  text-align:start;
+  padding:0.6rem 0rem;
+}
+.product .description h4{
+padding-top:0.4rem;
+color:black;
+font-size:1.1rem;
+}
+.description .gray{
+  color:gray;
+}
+
+.product-container .show-btn{
+  margin:30px auto;
+font-size:1.2rem;
+width:10rem;
+padding:1rem 0rem;
+background-color: rgb(253, 253, 254);
+border:1px solid gray;
+color:black;
+}
+.show-btn:hover{
+cursor:pointer;
+background-color:rgb(200, 170, 170);
+}
+.show-btn-icon{
+  padding-left:0.4rem;
+  color:black;
+}
+/* ------------------banner(section-3)-------------- */
+.banner{
+  width:100vw;
+  background-image: url("pink-tshirt.jpg");
+  height:470px;
+  background-size: cover;
+  background-position: top;
+  object-fit: cover;
+}
+.banner h4{
+padding-top:6rem;
+padding-left:6rem;
+font-size:4rem;
+}
+.banner h5{
+font-size:3rem;
+padding-top:2rem;
+padding-left:6rem;
+}
+.banner button{
+color:gray;
+padding:0.8rem 2rem;
+border-radius: 1.5rem;
+border: none;
+margin-top:3rem;
+margin-left:6rem;
+font-size:1.2rem;
+cursor:pointer;
+}
+.banner button:hover{
+  color:rgb(174, 174, 213);
+}
+
+
+/* ---------------Best sellers on Watches(section-4)----------- */
+.watch-container{
+width:100vw;
+}
+.watch-container h2{
+text-align:center;
+color:black;
+font-size:2.5rem;
+padding:1.5rem 0rem;
+}
+.watch-container h2 .orange{
+  color:orange;
+}
+.watch span:nth-child(1){
+  color:black;
+}
+.watch-items{
+  display:flex;
+  justify-content: center;
+}
+.watch{
+    width:19%;
+    min-width:12.5rem;
+    padding:0.6rem 0.7rem;
+    cursor: pointer;
+    margin:0.9rem 0rem;
+  }
+.watch img{
+  width:100%;
+  object-fit: cover;
+}
+.watch .description{
+  text-align:start;
+  padding:0.6rem 0rem;
+}
+.watch .description h4{
+  padding-top:1rem;
+  color:black;
+  font-size:1rem;
+  }
+  .watch .description h4 s{
+    color:gray;
+    padding-left:1rem;
+  }
+.watch .description p{
+  padding-top:0.5rem;
+  color:gray;
+  font-size:0.9rem;
+  }
+  .discount{
+    color:rgb(219, 180, 117);
+    font-size:small;
+  }
+  /* --------------footwear(section-5)-------- */
+  .footwear-container{
+    width:100vw;
+    }
+    .footwear-container h2{
+    text-align:center;
+    color:black;
+    font-size:2.5rem;
+    padding:1.5rem 0rem;
+    }
+    .footwear-container h2 .orange{
+      color:orange;
+    }
+    .footwear span:nth-child(1){
+      color:black;
+    }
+    .footwear-items{
+      display:flex;
+      justify-content: center;
+    }
+    .footwear{
+        width:19%;
+        min-width:12.5rem;
+        padding:0.6rem 0.7rem;
+        cursor: pointer;
+        margin:0.9rem 0rem;
+      }
+    .footwear img{
+      width:100%;
+      object-fit: cover;
+    }
+    .footwear .description{
+      text-align:start;
+      padding:0.6rem 0rem;
+    }
+    .footwear .description h4{
+      padding-top:1rem;
+      color:black;
+      font-size:1rem;
+      }
+      .footwear .description h4 s{
+        color:gray;
+        padding-left:1rem;
+      }
+    .footwear .description p{
+      padding-top:0.5rem;
+      color:gray;
+      font-size:0.9rem;
+      }
+      .discount{
+        color:rgb(219, 180, 117);
+        font-size:small;
+      }
+
+
+
+/* ---------------footer(section-6)---------------- */
+
+.footer-section{
+  width:100vw;
+  background-color:rgb(58, 58, 59);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+  color:gray;
+  margin-top:2rem;
+}
+.footer-section .follow{
+  margin-top:1.25rem;
+}
+.footer-section .follow i{
+  margin-top:1.25rem;
+  padding-right:0.3rem;
+  cursor:pointer;
+}
+.footer-section .follow i:hover{
+  color:rgb(154, 109, 109);
+}
+.column-flex{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  margin-bottom:1.25rem;
+}
+.column-flex h1{
+padding-top:2rem;
+font-size:1.56rem;
+}
+.column-flex h4{
+  padding-top:2rem;
+  font-size:1rem;
+  padding-bottom:1.25rem;
+}
+.column-flex p{
+  font-size:0.875rem;
+  margin:1px;
+}
+.column-flex p:hover{
+  color:white;
+}
+.column-flex a{
+  text-decoration: none;
+  color:gray;
+  margin-bottom:10px;
+  font-size:1rem;
+}
+.column-flex a:hover{
+  color:white;
+}
+.copyright{
+  width:100vw;
+}
+.copyright p{
+  padding:0.37rem 0rem;
+  font-size:1rem;
+  text-align:center;
+  background-color: rgb(32, 32, 32);
+}
+
+/* ---------------(CSS FOR:womensdresses-page)----------- */
+.showmorepage-hero{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top:1.5rem;
+  width:100vw;
+  height:21.875rem;
+  background-image: url("https://images.pexels.com/photos/7871161/pexels-photo-7871161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size:cover;
+  opacity: 0.8;
+  object-fit:cover;
+  background-position: center;
+}
+.showmorepage-hero h4{
+z-index: 1000;
+text-align: center;
+font-size:6rem;
+}
+.showmorepage-hero p{
+text-align:center;
+font-size:1.8rem;
+}
+
+/* ----------------(CSS FOR : sproduct)-------------- */
+#prodetails{
+  display:flex;
+  margin-top: 1.25rem;
+}
+#prodetails .single-pro-image{
+  width:35%;
+  margin:3.125rem;
+}
+.small-img-group{
+  display: flex;
+  justify-content: space-between;
+}
+.small-img-col{
+  flex-basis: 24%;
+  cursor:pointer;
+}
+ #prodetails .single-pro-details{
+  width:50%;
+  padding-top: 3.125rem;
+  float: left;
+}
+#prodetails .single-pro-details span{
+  color:black;
+}
+
+#prodetails .single-pro-details .gray{
+  color:gray;
+  font-size:1.25rem;
+}
+
+#prodetails .single-pro-details h4{
+color:black;
+font-size: 1.8rem;
+padding:1.5rem 0rem;
+}
+#prodetails .single-pro-details select{
+  display:block;
+  padding:0.3rem 0.6rem;
+  margin-bottom:0.6rem;
+  color:black;
+  /* background-color: rgb(174,174,213); */
+}
+#prodetails .single-pro-details select option{
+  color:black;
+}
+
+#prodetails .single-pro-details input{
+  width:3.125rem;
+  height:2.9rem;
+  color:black;
+  padding-left:0.6rem;
+  font-size:1rem;
+  margin-right:0.6rem;
+}
+#prodetails .single-pro-details button{
+  color:black;
+  padding:0.6rem 1.56rem;
+  font-size:1rem;
+  background-color: rgb(174, 174, 213);
+  border:none;
+}
+#prodetails .single-pro-details #pro-details{
+  line-height: 1.5rem;
+  color: black;
+}
+/* ----------mens-page---------- */
+
+/* -------(CSS FOR:sign-up-page)------- */
+
+.account-page-background{
+  margin:0;
+  padding:0;
+  width:100vw;
+  height:100vh;
+  background-image: url('accountpagebg.jpg');
+  background-size: cover;
+  opacity: 0.9;
+  position: relative;
+}
+
+.signup{
+  background-color: white;
+  width:400px;
+  height:500px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.signup h1{
+  padding:2rem;
+  color:rgb(83, 83, 143);
+  text-align:center;
+}
+.input-group{
+  padding: 1rem;
+}
+.input-field{
+  background: #eaeaea;
+  margin:0.75rem 2rem;
+  border-radius:0.18rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:black;
+  max-height:4.06rem;
+}
+.form-input{
+    width:100%;
+    background: transparent;
+    border:0;
+    outline:0;
+    padding:1.125rem 0.9rem;
+  }
+  .input-field .form-icon{
+    color:#999;
+    margin-left:0.9rem;
+  }
+  form p{
+    margin-left:2.2rem;
+    text-align:left;
+    font-size:0.81rem;
+    color:#999;
+  }
+  .btn-field{
+    padding:1rem;
+  }
+  .btn-field button{
+background-color: rgb(87, 87, 139);
+width:85%;
+padding:0.8rem 0.8rem; 
+margin-left:1.8rem;
+border:none;
+font-size: medium;
+cursor: pointer;
+ }
+ .btn-field  p{
+margin-top:1rem;
+margin-right:1.5rem;
+text-align: center;
+font-size: 0.81rem;
+ }
+ .btn-field p a{
+  color:rgb(73, 73, 137);
+  font-size:0.81rem;
+
+ }
+ /* ------about us page---- */
+ body{
+  /* background-color: #e1848d; */
+ }
+.Aboutusclass{
+  width:60vw;
+  height:500px;
+  margin:2rem auto;
+  /* border:1px solid red; */
+  /* background-color: #a4a4a3; */
+}
+#aboutusheading {
+  color:rgb(9, 9, 9);
+  font-size:4rem;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+#aboutuspara{
+  color:gray;
+  font-size:1.4rem;
+  text-align: left;
+}
+
+/* -----------------(CSS FOR:cart page)----------------- */
+.cart{
+  height:28.125rem;
+  width:100vw;
+  background-image:url("https://images.pexels.com/photos/5650049/pexels-photo-5650049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.7;
+  position: relative;
+}
+.empty-cart-msgbox{
+  /* width:100%; */
+  max-width:50rem;
+  height:18.75rem;
+  position:absolute;
+  top:4.68rem;
+  left:37.5rem;
+  text-align:center;
+  padding:2.5rem 3.125rem 3.125rem;
+  /* background: #fff; */
+  z-index: 1000;
+  transition:  .5s ease-in;
+  /* border:2px solid red; */
+}
+.empty-cart-msgbox h1{
+  color: black;
+  text-align: center;
+  font-size:2.5rem;
+}
+.thumb-icon{
+  color:black;
+}
+.empty-cart-msgbox p{
+  text-align:left;
+  font-size:1.2rem;
+  padding-top:0.5rem;
+  color:rgb(43, 137, 33);
+}
+.empty-cart-msgbox button{
+  background:#a4a4a3;
+  border: none;
+  width:8rem;
+  border-radius:0.37rem;
+  padding:0.8rem;
+  margin-top:3rem;
+  margin-right: 0.7rem;
+  cursor: pointer;
+  float: left;
+}
+.empty-cart-msgbox a button {
+  font-size:1rem;
+  color:black;
+  text-decoration: none;
+}
+#yellow{
+  background: #9081a8;
+}
+#nocolor{
+  background: #d2cfcf;
+  border:1px solid gray;
+}
+/* -----------addtocart.html page--------- */
+#addtocart{
+  width:90%;
+  margin:3rem auto;
+}
+#addtocart table{
+  width:100%;
+  border-collapse: collapse;
+  table-layout:fixed;
+  white-space: nowrap;
+}
+#addtocart table img{
+  width:80px;
+}
+#addtocart table thead{
+  border: 1px solid #e2e9e1;
+  border-left:none;
+  border-right:none;
+}
+#addtocart table thead td{
+  font-weight: 700;
+  font-size:17px;
+  padding:18px 0px;
+}
+#addtocart table tbody td{
+  padding-top:15px;
+}
+#addtocart tr td{
+  color: black;
+}
+#addtocart tr td span{
+  color: black;
+}
+#addtocart tr td i{
+  color: black;
+}
+#addtocart table td:nth-child(1){
+  width:100px;
+  text-align: center;
+}
+#addtocart table td:nth-child(2){
+  width:150px;
+  text-align: center;
+}
+#addtocart table td:nth-child(3){
+  width:300px;
+  text-align: center;
+}
+#addtocart table td:nth-child(4)
+#addtocart table td:nth-child(5)
+#addtocart table td:nth-child(6)
+{
+  width:150px;
+  text-align: center;
+  color:black;
+}
+#addtocart table td:nth-child(5) input{
+  width:70px;
+  padding:10px 5px 10px 15px;
+  color:black;
+}
+
+#cart-total{
+  width:90%;
+  /* background-color: black; */
+  margin:3rem auto;
+}
+.Subtotal{
+  width:50%;
+  border:1px solid #e2e9e1;
+  padding:30px;
+  margin:0rem auto;
+}
+.Subtotal h3{
+  color:black;
+  padding-bottom: 15px;
+  font-size:22px;
+}
+.Subtotal table{
+  border-collapse:collapse;
+  width:100%;
+  margin-bottom:20px;
+}
+.Subtotal table tr td{
+  color:black;
+  width:50%;
+  padding:10px;
+  border:1px solid #e2e9e1;
+}
+.Subtotal tr td span{
+  color:black;
+}
+.Subtotal tr td strong{
+  color:black;
+}
+.normal{
+  /* color:black; */
+  background-color: rgb(174, 174, 213);
+  border:none;
+  width:200px;
+  height:40px;
+  font-size:1.1rem;
+}
+
+
+
+
+
